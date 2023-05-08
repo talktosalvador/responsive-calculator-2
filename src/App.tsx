@@ -49,10 +49,10 @@ function App() {
         </div>
       </header>
       <main>
-        <div className="flex flex-col justify-center sm:flex-row">
-          <div>
+        <div className="flex flex-col justify-center sm:flex-row pb-10">
+          <div className="sm:w-1/2">
             {/* title */}
-            <div className="mx-auto text-center p-10">
+            <div className="mx-auto text-center py-10">
               <h1 className="font-display text-5xl font-normal py-4">
                 <span className="text-blue-400 font-bold">PX </span>to
                 <span className="text-blue-400 font-bold"> VW</span>
@@ -64,24 +64,24 @@ function App() {
             </div>
 
             {/* features */}
-            <div className="m-10 flex flex-col rounded-3xl p-8 bg-blue-100 text-blue-400">
+            <div className="mx-10 rounded-3xl p-8 bg-blue-100 text-blue-400 shadow-lg">
               <h3 className="font-display text-lg">Save your time</h3>
               <p className="mt-2 text-base text-blue-300">
                 A good design needs a group of preset values, here we help you
                 with that.
               </p>
               <ul role="list" className="mt-10 flex flex-col gap-y-3 text-sm">
-                {features.map((event, eventIndex) => (
+                {features.map(event => (
                   <li key={event.id} className="flex">
                     <svg
                       aria-hidden="true"
-                      className="h-6 w-6 flex-none fill-current stroke-current"
+                      className="h-6 w-6 flex-none fill-current stroke-current text-green-400 bg-blue-50 rounded-xl"
                     >
                       <path
                         d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
                         strokeWidth="0"
                       ></path>
-                      <circle
+                      {/* <circle
                         cx="12"
                         cy="12"
                         r="8.25"
@@ -89,7 +89,7 @@ function App() {
                         strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                      ></circle>
+                      ></circle> */}
                     </svg>
                     <span className="ml-4">{event.content}</span>
                   </li>
@@ -99,16 +99,16 @@ function App() {
           </div>
 
           {/* inputs */}
-          <div className="p-10">
+          <div className="p-10 sm:w-1/2">
             <div className="relative mx-auto py-4">
               <label
-                className="absolute left-14 top-2 bg-white px-2 text-sm font-bold"
+                className="absolute left-6 top-2 bg-white px-2 text-sm font-bold"
                 htmlFor="parents"
               >
                 parent width
               </label>
               <input
-                className="border-blue-200 border-4 rounded-xl h-14 w-full text-lg px-2"
+                className="border-blue-200 border-4 rounded-xl h-14 w-full text-lg px-2 shadow-md"
                 type="text"
                 name="parents"
                 id="parents"
@@ -116,13 +116,13 @@ function App() {
             </div>
             <div className="relative mx-auto py-4">
               <label
-                className="absolute left-14 top-2 bg-white px-2 text-sm font-bold"
+                className="absolute left-6 top-2 bg-white px-2 text-sm font-bold"
                 htmlFor="children"
               >
                 children width
               </label>
               <input
-                className="border-blue-200 border-4 rounded-xl h-14 w-full text-lg px-2"
+                className="border-blue-200 border-4 rounded-xl h-14 w-full text-lg px-2 shadow-md"
                 type="text"
                 name="children"
                 id="parents"
